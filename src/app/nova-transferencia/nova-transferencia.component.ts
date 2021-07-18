@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Transferencia } from '../models/transferencia.models';
 import { TransferenciaService } from '../services/transferencia.service';
 
@@ -15,7 +16,7 @@ export class NovaTransferenciaComponent {
   valor: number;
   destino: number;
 
-  constructor(private service: TransferenciaService) {}
+  constructor(private service: TransferenciaService, private router: Router) {}
 
   transferir() {
 
@@ -29,6 +30,7 @@ export class NovaTransferenciaComponent {
     );
 
     this.limparCampos();
+    this.router.navigateByUrl('extrato');
 
   }
 
