@@ -1,4 +1,4 @@
-<table class="tabela">
+<table class="tabela" *ngIf="transferencias?.length > 0; else listaVazia">
   <thead class="tabela__cabecalho">
     <th class="tabela__cabecalho__conteudo">Data</th>
     <th class="tabela__cabecalho__conteudo">Valor</th>
@@ -12,5 +12,8 @@
     </tr>
   </tbody>
 </table>
+<ng-template #listaVazia>
+  <p class="tabela" >Nenhuma operação cadastrada</p>
+</ng-template>
 
 
