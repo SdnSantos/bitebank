@@ -1,4 +1,8 @@
 {
-    "totvsLanguageServer.welcomePage": false,
-    "angular.enable-strict-mode-prompt": false
+    "angular.enable-strict-mode-prompt": false,
+    "cSpell.words": [
+        "component",
+        "nova",
+        "transferencia"
+    ]
 }
